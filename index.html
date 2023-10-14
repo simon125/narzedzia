@@ -1,0 +1,117 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <article>
+        <h2>Agenda</h2>
+        <ul>
+          <li>VSCode</li>
+          <li>Extensiony</li>
+          <li>Google Chrome</li>
+          <li>NodeJS & NPM</li>
+          <li>GIT</li>
+          <li>GIT & VSC</li>
+        </ul>
+      </article>
+      <article>
+        <p>VSCode</p>
+        <ul>
+          <li>Overview - czyli co gdzie jest</li>
+          <li>Ultraważne skróty np: ctrl + p</li>
+          <li>Extenstiony</li>
+          <li>Ustawienia</li>
+          <li>Parę skrótów klawiszowych: multikursor, ctr + spacja etc.</li>
+        </ul>
+      </article>
+      <article>
+        <p>Przeglądarka</p>
+        <ul>
+          <li>Playground - plac boju - "środowisko uruchomieniowe"</li>
+          <li>Codzienne narzędzie pracy devtoolsy - overview zakładek</li>
+        </ul>
+        <button id="getuser">Pobierz użytkownika - zakładka network</button>
+      </article>
+
+      <article>
+        <h2>NodeJS - Instalacja - Overview</h2>
+        <ul>
+          <li>Node jako środowisko urchomieniowe</li>
+          <li>Node jako "technologia backendowa"</li>
+          <li>Node jako środowisko developerskie</li>
+          <li>NPM jako rejestr - baza danych</li>
+          <li>NPM jako strona npm</li>
+          <li>NPM jako narzędzie</li>
+          <li>
+            Setup projektu
+            <ul>
+              <li>npm init</li>
+              <li>package.json</li>
+              <li>package-lock.json</li>
+              <li>node_modules</li>
+              <li>npm install i inne</li>
+              <li>NPM alternatywy</li>
+            </ul>
+          </li>
+          <li>
+            CLI - command line interface
+            <ul>
+              <li>npm init</li>
+              <li>npm build</li>
+              <li>npm ci</li>
+              <li>npm i</li>
+              <li>npm link</li>
+              <li>npm dedupe</li>
+              <li>npm pack</li>
+              <li>npm run < script_name ></li>
+              <li>npm audit</li>
+            </ul>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <img
+          style="display: block; margin: 0 auto"
+          src="./nodeModules.png"
+          alt=""
+        />
+      </article>
+      <article>
+        <h2>GIT</h2>
+        <ul>
+          <li>GIT - Repozytorium - intro - kontrola wersji</li>
+          <li>
+            Inicjalizacja
+            <ul>
+              <li>git init</li>
+              <li>git clone??</li>
+            </ul>
+          </li>
+
+          <li>
+            Repo zdalne
+            <ul>
+              <li>git init</li>
+              <li>git clone??</li>
+            </ul>
+          </li>
+        </ul>
+      </article>
+    </div>
+    <script type="module" src="./addTwoNumbers.js"></script>
+    <script>
+      document.querySelector("#getuser").addEventListener("click", () => {
+        fetch("https://jsonplaceholder.typicode.com/users/1")
+          .then((response) => response.json())
+          .then((json) => console.log(json));
+      });
+    </script>
+  </body>
+</html>
